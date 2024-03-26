@@ -17,7 +17,7 @@ spec:
       networkType: "OVNKubernetes"
       extraManifests:
         searchPaths:
-          - ../../ztp-policies/bevo/extra-manifest
+          - ../ztp-policies/bevo/extra-manifest
       installConfigOverrides: "{\"capabilities\":{\"baselineCapabilitySet\": \"None\", \"additionalEnabledCapabilities\": [ \"marketplace\", \"NodeTuning\" ] }}"
       cpuPartitioningMode: AllNodes
       clusterLabels:
