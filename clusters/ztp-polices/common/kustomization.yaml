@@ -1,0 +1,23 @@
+---
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+
+resources:
+ - ns.yaml
+
+generators:
+ # This is common to all RAN DU deployments
+ - common-policies/common-du-ranGen-414.yaml
+
+ # Private Wireless Network profile Dell R750
+ - group-policies/group-dellr750-vse6.yaml
+ - group-policies/group-dellr750-vse6-validator.yaml
+# This group policy is for some HPe Edgeline e920t based deployments with SKU 1:
+# - group-policies/group-hpee920t-sku1.yaml
+# - group-policies/group-hpee920t-sku1-validator.yaml
+# This group policy is for Dell xr8620t based deployments:
+# - group-policies/group-dellxr8620t-sku2.yaml
+# - group-policies/group-dellxr8620t-sku2-validator.yaml
+
+# These are examples that should be replicated for every individual site:
+# - site-specific-policies/interceptor-worker-cars3-lab.yaml
