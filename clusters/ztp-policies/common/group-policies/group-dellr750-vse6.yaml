@@ -88,7 +88,7 @@ spec:
         deviceType: vfio-pci
         mtu: 9216
         isRdma: false
-        nicselector:
+        nicSelector:
           pfNames:
           - ens5f0#0-1
           vendor: "8086"
@@ -103,7 +103,7 @@ spec:
         deviceType: netdevice
         mtu: 9216
         isRdma: false
-        nicselector:
+        nicSelector:
           pfNames:
           - ens5f0#2-6
           vendor: "8086"
@@ -118,7 +118,7 @@ spec:
         deviceType: vfio-pci
         mtu: 9216
         isRdma: false
-        nicselector:
+        nicSelector:
           pfNames:
           - ens5f1#0-3
           vendor: "8086"
@@ -133,7 +133,7 @@ spec:
         deviceType: vfio-pci
         mtu: 9216
         isRdma: false
-        nicselector:
+        nicSelector:
           pfNames:
           - ens5f1#4-7
           vendor: "8086"
@@ -148,7 +148,7 @@ spec:
         deviceType: vfio-pci
         mtu: 9216
         isRdma: false
-        nicselector:
+        nicSelector:
           pfNames:
           - ens2f0#0-3
           vendor: "8086"
@@ -163,7 +163,7 @@ spec:
         deviceType: netdevice
         mtu: 9216
         isRdma: false
-        nicselector:
+        nicSelector:
           pfNames:
           - ens2f0#4-7
           vendor: "8086"
