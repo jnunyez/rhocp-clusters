@@ -105,7 +105,7 @@ spec:
         isRdma: false
         nicSelector:
           pfNames:
-          - ens5f0#2-6
+          - "ens5f0#2-6"
           vendor: "8086"
         numVfs: 7
         priority: 99
@@ -164,8 +164,7 @@ spec:
         mtu: 9216
         isRdma: false
         nicSelector:
-          pfNames:
-          - ens2f0#4-7
+          pfNames: ["ens2f0#4-7"]
           vendor: "8086"
         numVfs: 8
         priority: 99
