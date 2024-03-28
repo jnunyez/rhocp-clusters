@@ -113,7 +113,7 @@ spec:
     - fileName: SriovNetworkNodePolicy.yaml
       policyName: "sriov-vfio-policy-ens5f1"
       metadata:
-        name: intel-sriov-vfio-ens2f0
+        name: intel-sriov-vfio-ens5f1
       spec:
         deviceType: vfio-pci
         mtu: 9216
@@ -130,7 +130,7 @@ spec:
       metadata:
         name: intel-sriov-netd-ens5f1
       spec:
-        deviceType: vfio-pci
+        deviceType: netdevice
         mtu: 9216
         isRdma: false
         nicSelector:
