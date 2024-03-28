@@ -150,7 +150,7 @@ spec:
         isRdma: false
         nicSelector:
           pfNames:
-          - ens2f0#0-3
+          - "ens2f0#0-3"
           vendor: "8086"
         numVfs: 8
         priority: 99
