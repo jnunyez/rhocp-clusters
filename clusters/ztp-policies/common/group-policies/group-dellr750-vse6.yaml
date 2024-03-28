@@ -48,28 +48,31 @@ spec:
         acceleratorSelector:
           pciAddress: 0000:ca:00.0
         physicalFunction:
-         bbDevConfig:
-          acc100:
-            # Programming mode: 0 = VF Programming, 1 = PF Programming
-            pfMode: false
-            numVfBundles: 3
-            maxQueueSize: 1024
-            uplink4G:
-              numQueueGroups: 2
-              numAqsPerGroups: 16
-              aqDepthLog2: 4
-            downlink4G:
-              numQueueGroups: 2
-              numAqsPerGroups: 16
-              aqDepthLog2: 4
-            uplink5G:
-              numQueueGroups: 2
-              numAqsPerGroups: 16
-              aqDepthLog2: 4
-            downlink5G:
-              numQueueGroups: 2
-              numAqsPerGroups: 16
-              aqDepthLog2: 4
+          pfDriver: pci-pf-stub
+          vfDriver: vfio-pci
+          vfAmount: 3
+          bbDevConfig:
+            acc100:
+              # Programming mode: 0 = VF Programming, 1 = PF Programming
+              pfMode: false
+              numVfBundles: 3
+              maxQueueSize: 1024
+              uplink4G:
+                numQueueGroups: 2
+                numAqsPerGroups: 16
+                aqDepthLog2: 4
+              downlink4G:
+                numQueueGroups: 2
+                numAqsPerGroups: 16
+                aqDepthLog2: 4
+              uplink5G:
+                numQueueGroups: 2
+                numAqsPerGroups: 16
+                aqDepthLog2: 4
+              downlink5G:
+                numQueueGroups: 2
+                numAqsPerGroups: 16
+                aqDepthLog2: 4
     - fileName: SriovOperatorConfig.yaml
       policyName: "config-policy"
       # For existing clusters with node selector set as "master",
