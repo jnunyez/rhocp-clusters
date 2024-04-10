@@ -18,6 +18,7 @@ spec:
       extraManifests:
         searchPaths:
           - ../ztp-policies/bevo/extra-manifest
+          - ../ztp-policies/bevo/custom-manifest
       installConfigOverrides: "{\"capabilities\":{\"baselineCapabilitySet\": \"None\", \"additionalEnabledCapabilities\": [ \"marketplace\", \"NodeTuning\" ] }}"
       cpuPartitioningMode: AllNodes
       clusterLabels:
