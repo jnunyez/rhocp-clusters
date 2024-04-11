@@ -53,6 +53,8 @@ spec:
       policyName: "subscriptions-policy"
     - fileName: ReduceMonitoringFootprint.yaml
       policyName: "config-policy"
+    - fileName: ClusterLogForwarder.yaml
+      policyName: "log-forwarder-policy"
     #
     # These CRs are in support of installation from a disconnected registry
     #
