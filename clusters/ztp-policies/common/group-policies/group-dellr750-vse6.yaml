@@ -89,7 +89,7 @@ spec:
         name: intel-sriov-vfio-ens5f0
       spec:
         deviceType: vfio-pci
-        mtu: 9216
+        mtu: 1500
         isRdma: false
         nicSelector:
           pfNames:
@@ -157,7 +157,7 @@ spec:
           vendor: "8086"
         numVfs: 8
         priority: 99
-        resourceName: pci_sriov_net_ens2f0_0 
+        resourceName: pci_sriov_net_ens2f0_0
     - fileName: SriovNetworkNodePolicy.yaml
       policyName: "sriov-netd-policy-ens2f0"
       metadata:
@@ -380,7 +380,7 @@ spec:
                   - "29.20"
                   - "-p"
                   - "MON-HW"
-                reportOutput: true              
+                reportOutput: true
           ptp4lConf: |
             [ens5f0]
             masterOnly 1
