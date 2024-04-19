@@ -26,7 +26,7 @@ spec:
         #- cidr: fd01::/48
         #  hostPrefix: 64
       machineNetwork:
-        - cidr: 192.168.38.128/26
+        - cidr: 192.168.49.0/25
         #- cidr: 2600:52:7:300::0/64
       serviceNetwork:
         - 172.30.0.0/16
@@ -94,13 +94,15 @@ spec:
                   #  dhcp: false
               dns-resolver:
                 config:
+                  search:
+                    - cars2.lab
                   server:
                     - 192.168.38.12
                     #- 2600:52:7:38::12
               routes:
                 config:
                   - destination: 0.0.0.0/0
-                    next-hop-address: 192.168.49.129
+                    next-hop-address: 192.168.49.1
                     next-hop-interface: eno8303np0
                   #- destination: ::/0
                   #  next-hop-address: 2600:52:7:300::1

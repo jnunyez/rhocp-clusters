@@ -12,6 +12,9 @@ generators:
  # Private Wireless Network profile Dell R750
  - group-policies/group-dellr750-vse6.yaml
  - group-policies/group-dellr750-vse6-validator.yaml
+
+ # This group policy is for Dell XR12 for synchronization
+ - group-policies/group-dellxr12-sync.yaml
 # This group policy is for some HPe Edgeline e920t based deployments with SKU 1:
 # - group-policies/group-hpee920t-sku1.yaml
 # - group-policies/group-hpee920t-sku1-validator.yaml
