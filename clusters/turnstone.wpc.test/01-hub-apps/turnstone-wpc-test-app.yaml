@@ -10,7 +10,7 @@ spec:
     namespace: clusters-sub
   project: ztp-app-project
   source:
-    path: clusters/turnstone.cars2.lab
+    path: clusters/turnstone.wpc.test
     repoURL: https://github.com/jnunyez/rhocp-clusters
     targetRevision: main
     # uncomment the below plugin if you will be adding the plugin binaries in the same repo->dir where
