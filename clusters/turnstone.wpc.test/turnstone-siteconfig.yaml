@@ -7,7 +7,7 @@ metadata:
   name: "turnstone"
   namespace: "turnstone"
 spec:
-  baseDomain: "cars2.lab"
+  baseDomain: "wpc.test"
   pullSecretRef:
     name: "assisted-deployment-pull-secret"
   clusterImageSetNameRef: "img4.14.21-x86-64-appsub"
@@ -42,7 +42,7 @@ spec:
       # httpsProxy: http://cars2-client.infra.cars2.lab:3128
       # noProxy: ".cars2.lab,2600:52:7:300::0/64,fd02::/112,fd01::/48,2600:52:7:300::177,2600:52:7:300::179,2600:52:7:300::180,2600:52:7:300::181"
       nodes:
-        - hostName: "xr12-u5.turnstone.cars2.lab"
+        - hostName: "xr12-u5.turnstone.wpc.test"
           role: "master"
           # Optionally; This can be used to configure desired BIOS setting on a host:
           # biosConfigRef:
@@ -95,7 +95,7 @@ spec:
               dns-resolver:
                 config:
                   search:
-                    - cars2.lab
+                    - wpc.test
                   server:
                     - 192.168.38.12
                     #- 2600:52:7:38::12
