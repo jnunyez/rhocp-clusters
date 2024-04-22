@@ -74,7 +74,7 @@ spec:
       spec:
         profile:
         - name: "grandmaster"
-          phc2sysOpts: -r -u 0 -m -O -37 -N 8 -R 16 -s ens2f0np0 -n 24
+          phc2sysOpts: -r -u 0 -m -O -37 -N 8 -R 16 -s ens2f0 -n 24
           plugins:
             e810:
               enableDefaultConfig: true
@@ -137,7 +137,7 @@ spec:
                   - "MON-HW"
                 reportOutput: true
           ptp4lConf: |
-            [ens2f0np0]
+            [ens2f0]
             masterOnly 1
             [global]
             #
@@ -253,7 +253,7 @@ spec:
             ts2phc.pulsewidth 100000000
             ts2phc.nmea_serialport /dev/gnss0
             leapfile  /usr/share/zoneinfo/leap-seconds.list
-            [ens2f0np0]
+            [ens2f0]
             ts2phc.extts_polarity rising
             ts2phc.extts_correction 0
           ts2phcOpts: "-m"
