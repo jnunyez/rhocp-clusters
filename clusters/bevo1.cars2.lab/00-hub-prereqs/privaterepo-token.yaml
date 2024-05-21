@@ -1,0 +1,15 @@
+# if your needs require a private repo, make sure you create an appropriate secret so ArgoCD can read the repo
+# created from: "oc create -n openshift-gitops secret generic temp-intel-ztphub-repo --from-literal=username=not-used --from-literal=password=<snip> --from-literal=url=https://github.com/intel-collab/networking.wireless.flexran.ocp-deployment.git"
+---
+apiVersion: v1
+data:
+  password: <snip>
+  url: aHR0cHM6Ly9naXRodWIuY29tL2ludGVsLWNvbGxhYi9uZXR3b3JraW5nLndpcmVsZXNzLmZsZXhyYW4ub2NwLWRlcGxveW1lbnQuZ2l0Cg==
+  username: bm90LXVzZWQ=
+kind: Secret
+metadata:
+  labels:
+    argocd.argoproj.io/secret-type: repository
+  name: temp-intel-ztphub-repo
+  namespace: openshift-gitops
+type: Opaque
