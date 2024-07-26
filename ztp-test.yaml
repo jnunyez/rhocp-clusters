@@ -1,0 +1,29 @@
+apiVersion: ran.openshift.io/v1alpha1
+kind: ClusterGroupUpgrade
+metadata:
+  name: turnstone-upgrade
+  namespace: ztp-group
+spec:
+  backup: false
+  clusters:
+  - turnstone
+  enable: true
+  managedPolicies:
+    #- group-dellr750-vse6-sriov-netd-policy-ens5f0
+    #- group-dellr750-vse6-sriov-netd-policy-ens5f1
+    #- group-dellr750-vse6-sriov-network-policy-bh
+    #- group-dellr750-vse6-sriov-network-policy-mh-f1c
+    #- group-dellr750-vse6-sriov-network-policy-mh-f1u
+    #- group-dellr750-vse6-sriov-network-policy-vran-fh
+    #- group-dellr750-vse6-sriov-network-policy-vran-fh-c
+    #- group-dellr750-vse6-sriov-network-policy-vran-mgmt
+    #- group-dellr750-vse6-sriov-vfio-policy-ens2f0
+    #- group-dellr750-vse6-sriov-vfio-policy-ens5f0
+    #- group-dellr750-vse6-sriov-vfio-policy-ens5f1
+    #- group-dellr750-vse6-config-policy
+    #- group-dellr750-vse6-fec-policy
+    #- common-du-414-log-forwarder-policy
+    - group-dellxr12-sync-config-policy
+  preCaching: false
+  remediationStrategy:
+    maxConcurrency: 1
