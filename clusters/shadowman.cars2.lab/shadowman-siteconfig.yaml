@@ -81,7 +81,7 @@ spec:
                   ipv4:
                     enabled: true
                     address:
-                      - ip: 192.168.38.179"
+                      - ip: 192.168.38.179
                         prefix-length: 26
                     dhcp: false
                   ipv6:
