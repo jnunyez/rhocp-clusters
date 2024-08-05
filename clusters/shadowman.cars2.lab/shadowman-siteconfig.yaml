@@ -116,7 +116,7 @@ spec:
           bmcAddress: "idrac-virtualmedia://192.168.38.206/redfish/v1/Systems/System.Embedded.1"
           bmcCredentialsName:
             name: "r650-ixcp-2-bmc-creds-secret"
-          bootMACAddress: "b0:7b:25:ea:87:62"
+          bootMACAddress: "b0:7b:25:ea:cc:da"
           # Use UEFISecureBoot to enable secure boot
           bootMode: "UEFISecureBoot"
           rootDeviceHints:
@@ -173,7 +173,7 @@ spec:
                     next-hop-address: 2600:52:7:300::1
                     next-hop-interface: bondctrlplane
         - hostName: "cp3.cars2.lab"
-          role: master
+          role: "master"
           bmcAddress: "idrac-virtualmedia://192.168.38.207/redfish/v1/Systems/System.Embedded.1"
           bmcCredentialsName:
             name: "r650-ixcp-2-bmc-creds-secret"
