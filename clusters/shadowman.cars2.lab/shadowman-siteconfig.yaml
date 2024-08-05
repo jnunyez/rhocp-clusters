@@ -25,11 +25,11 @@ spec:
         - cidr: 192.168.38.128/26
         - cidr: 2600:52:7:300::0/64
       # For 3-node and standard clusters with static IPs, the API and Ingress IPs must be configured here
-      # apiVIP: 192.168.38.177
+      apiVIP: 192.168.38.177
       apiVIPs: 
         - 192.168.38.177
         - 2600:52:7:300::177
-      # ingressVIP: 192.168.38.178
+      ingressVIP: 192.168.38.178
       ingressVIPs: 
         - 192.168.38.178
         - 2600:52:7:300::178
