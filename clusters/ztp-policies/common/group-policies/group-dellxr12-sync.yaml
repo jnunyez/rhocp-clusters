@@ -32,6 +32,16 @@ spec:
     #     daemonNodeSelector:
     #       node-role.kubernetes.io/worker: ""
     #     ptpEventConfig:
+    - fileName: ReduceMonitoringFootprint.yaml
+      policyName: "config-policy"
+      data:
+        config.yaml: |
+          alertmanagerMain:
+            enabled: false
+          telemeterClient:
+            enabled: false
+          prometheusK8s:
+            retention: 4h
     - fileName: PerformanceProfile.yaml
       policyName: "config-policy"
       spec:
