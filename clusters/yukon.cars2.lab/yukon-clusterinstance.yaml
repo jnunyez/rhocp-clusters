@@ -6,7 +6,7 @@ metadata:
   namespace: "yukon"
 spec:
   additionalNTPSources:
-    - "2600:52:7:59::11"
+    - "2600:52:7:38::12"
   baseDomain: "cars2.lab"
   clusterImageSetNameRef: "openshift-4.18.26"
   clusterName: "yukon"
@@ -44,13 +44,13 @@ spec:
   serviceNetwork:
     - cidr: "172.30.0.0/16"
     - cidr: "fd02::/112"
-  sshPublicKey: "<STRING_BASE64_ENCODED>"
+  sshPublicKey: "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQCdbJDYY43Zu0EKAGgrSKEobyXIxdhT0AeTT3yBoNY+YdYDScimJsQzK4hKNJIn1xC3klr0dSnsqeJru+SA4GMhbdcsmVyudhutCw75R/vFoRHOwaeVS2SMiBAtDbAYGQ3dh6LapkmXeLURcycNbebUV4HM9XsYqnuL8J2XyY4tRKgHrAd6OQw4jsXDOxwTRlHM822N/2kgv8iEwiXAJoUoymbr8mnfSxuuaH0oiKBwuaK1wuaDrlJyXkXNslPq89/1f8hJfjixY2dQdW7Xk5m3t5ptQxWENpw79OMRJ4cDW4G7LrtFONom5KQ+9TBZJIhNgJobkqI4qwinrWF8qMW5"
   templateRefs:
     - name: ai-cluster-templates-v1
       namespace: open-cluster-management
   nodes:
     - automatedCleaningMode: "disabled"
-      bmcAddress: "redfish-virtualmedia://192.168.38.74/redfish/v1/Systems/Self"
+      bmcAddress: "idrac-virtualmedia://192.168.38.74/redfish/v1/Systems/System.Embedded.1"
       bmcCredentialsName:
         name: "yukon-cwl"
       bootMACAddress: ""
@@ -104,3 +104,60 @@ spec:
       templateRefs:
         - name: ai-node-templates-v1
           namespace: open-cluster-management
+    - bmcAddress: "idrac-virtualmedia://192.168.125.1:9000/redfish/v1/Systems/local/mno2-master1"
+    bmcCredentialsName:
+      name: "mno2-bmc-credentials"
+    bootMACAddress: "AA:AA:AA:AA:03:02"
+    bootMode: "UEFI"
+    hostName: "mno2-master1.5g-deployment.lab"
+    nodeLabels:
+      5gran.lab/my-custom-label: ""
+    nodeNetwork:
+      config:
+        interfaces:
+        - ipv4:
+            dhcp: false
+            enabled: false
+          ipv6:
+            enabled: false
+          name: "enp1s0"
+          state: "up"
+          type: "ethernet"
+      interfaces:
+      - macAddress: "AA:AA:AA:AA:03:02"
+        name: "enp1s0"
+    role: "master"
+    rootDeviceHints:
+      deviceName: "/dev/vda"
+    templateRefs:
+    - name: "ai-node-templates-v1"
+      namespace: "open-cluster-management"
+    - bmcAddress: "idrac-virtualmedia://192.168.125.1:9000/redfish/v1/Systems/local/mno2-master1"
+    bmcCredentialsName:
+      name: "mno2-bmc-credentials"
+    bootMACAddress: "AA:AA:AA:AA:03:02"
+    bootMode: "UEFI"
+    hostName: "mno2-master1.5g-deployment.lab"
+    nodeLabels:
+      5gran.lab/my-custom-label: ""
+    nodeNetwork:
+      config:
+        interfaces:
+        - ipv4:
+            dhcp: false
+            enabled: false
+          ipv6:
+            enabled: false
+          name: "enp1s0"
+          state: "up"
+          type: "ethernet"
+      interfaces:
+      - macAddress: "AA:AA:AA:AA:03:02"
+        name: "enp1s0"
+    role: "master"
+    rootDeviceHints:
+      deviceName: "/dev/vda"
+    templateRefs:
+    - name: "ai-node-templates-v1"
+      namespace: "open-cluster-management"
+    
